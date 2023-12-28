@@ -3,13 +3,13 @@ import argparse
  
 def mat(gpu_idx):
     device = torch.device(gpu_idx)
-    a = torch.randn(size=(1024, 10240)).to(device)
+    a = torch.randn(size=(20240, 20240)).to(device)
     cnt = 0
     while True:
         a @ a.T
         cnt += 1
-        if cnt % 1000 == 0:
-            a = torch.randn(size=(1024, 10240)).to(device)
+        # if cnt % 1000 == 0:
+        #     a = torch.randn(size=(1024, 10240)).to(device)
  
  
  
